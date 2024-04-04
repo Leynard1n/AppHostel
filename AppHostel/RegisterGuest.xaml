@@ -1,0 +1,48 @@
+﻿<Window x:Class="AppHostel.RegisterGuest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppHostel"
+        mc:Ignorable="d"
+        Title="RegisterGuest" Height="450" Width="800" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="BurlyWood">
+            <StackPanel>
+                <Label Content="Name"/>
+                <TextBox Height="20"/>
+                <Label Content="Surname"/>
+                <TextBox Height="20"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Country"/>
+                    <TextBox Height="20" Width="40"/>
+                    <Label Content="City"/>
+                    <TextBox Height="20" Width="120"/>
+                    <Label Content="Phone"/>
+                    <TextBox Height="20" Width="110"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Серия"/>
+                    <TextBox Height="20" Width=" 60"/>
+                    <Label Content="Номер"/>
+                    <TextBox Height="20" Width="120"/>
+                </StackPanel>
+                <Label Content="Email"/>
+                <TextBox Height="20"/>
+                <Label Content="Room"/>
+                <TextBox Height="20"/>
+                <Label Content="Привелегия"/>
+                <TextBox Height="20"/>
+                <Button x:Name="Save" Content="Save and send"/>
+                <Button x:Name="BAck" Content="Отменить" Click="BAck_Click"/>
+            </StackPanel>
+                </Grid>
+        <Grid Grid.Column="1" Background="SaddleBrown" >
+            <TextBlock Text="Comin soon..." FontSize=" 40" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+        </Grid>
+    </Grid>
+</Window>
