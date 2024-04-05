@@ -11,37 +11,37 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" Background="BurlyWood">
+        <Grid Grid.Column="0" Background="#4C5971">
             <StackPanel>
-                <Label Content="Name"/>
+                <Label Content="Name" Foreground="White"/>
                 <TextBox Height="20"/>
-                <Label Content="Surname"/>
+                <Label Content="Surname" Foreground="White"/>
                 <TextBox Height="20"/>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Country"/>
+                    <Label Content="Country" Foreground="White"/>
                     <TextBox Height="20" Width="40"/>
-                    <Label Content="City"/>
+                    <Label Content="City" Foreground="White"/>
                     <TextBox Height="20" Width="120"/>
-                    <Label Content="Phone"/>
+                    <Label Content="Phone" Foreground="White"/>
                     <TextBox Height="20" Width="110"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Серия"/>
+                    <Label Content="Серия" Foreground="White"/>
                     <TextBox Height="20" Width=" 60"/>
-                    <Label Content="Номер"/>
+                    <Label Content="Номер" Foreground="White"/>
                     <TextBox Height="20" Width="120"/>
                 </StackPanel>
-                <Label Content="Email"/>
+                <Label Content="Email" Foreground="White"/>
                 <TextBox Height="20"/>
-                <Label Content="Room"/>
+                <Label Content="Room" Foreground="White"/>
                 <TextBox Height="20"/>
-                <Label Content="Привелегия"/>
-                <TextBox Height="20"/>
-                <Button x:Name="Save" Content="Save and send"/>
-                <Button x:Name="BAck" Content="Отменить" Click="BAck_Click"/>
+                <Label Content="Привелегия" Foreground="White"/>
+                <TextBox Height="20" />
+                <Button x:Name="Save" Content="Save and send" Style="{DynamicResource MainAppButto}" Foreground="White"/>
+                <Button x:Name="BAck" Content="Отменить" Click="BAck_Click" Style="{DynamicResource DopAppButton}"/>
             </StackPanel>
                 </Grid>
-        <Grid Grid.Column="1" Background="SaddleBrown" >
+        <Grid Grid.Column="1" Background="DimGray" >
             <TextBlock Text="Comin soon..." FontSize=" 40" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
         </Grid>
     </Grid>

@@ -21,47 +21,47 @@
         <Grid Background="#787C40" Height="30" VerticalAlignment="Top" Grid.Column="0"  >
             <TextBlock Text="Поиск" FontSize="20" Foreground="White" HorizontalAlignment="Center"/>
         </Grid>
-        <Grid Background="Azure" Grid.Column="0" Margin="0 30 0 0 ">
+        <Grid Background="#4C5971" Grid.Column="0" Margin="0 30 0 0 ">
             <StackPanel>
-                <Label Content="Имя"/>
+                <Label Content="Имя" Foreground="White"/>
                 <TextBox Name="Name" Height="20" VerticalAlignment="Top" />
-                <Label Content="Фамилия"/>
+                <Label Content="Фамилия" Foreground="White"/>
                 <TextBox Height="20"/>
-                <Label Content="Номер комнаты"/>
+                <Label Content="Номер комнаты" Foreground="White"/>
                 <TextBox Height="20"/>
-                <Button Content="поиск"/>
+                <Button Content="поиск" Style="{DynamicResource MainAppButto}" Foreground="White" Height="20"/>
             </StackPanel>
         </Grid>
         <Grid Background="#787C40" Height="30" VerticalAlignment="Top" Grid.Column="1">
             <TextBlock Text="Профиль" Foreground="White" FontSize="20" HorizontalAlignment="Center"/>
         </Grid>
-        <Grid Background="Beige" Grid.Column="1" Margin="0 30 0 0">
+        <Grid Background="#4C5971" Grid.Column="1" Margin="0 30 0 0">
             <StackPanel>
-                <Label Content="Имя, Фамилия"/>
+                <Label Content="Имя, Фамилия" Foreground="White"/>
                 <TextBox Height="20"/>
-                <Label Content="Адресс"/>
+                <Label Content="Адресс" Foreground="White"/>
                 <TextBox Height="20"/>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Страна"/>
+                    <Label Content="Страна" Foreground="White"/>
                     <TextBox Height="20" Width="50"/>
-                    <Label Content="Номер телефона"/>
+                    <Label Content="Номер телефона" Foreground="White"/>
                     <TextBox Height="20" Width="130"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Label Content="Номер паспорта" />
+                    <Label Content="Номер паспорта" Foreground="White"/>
                     <TextBox Height="20" Width="40"/>
-                    <Label Content="Серия паспорта"/>
+                    <Label Content="Серия паспорта" Foreground="White"/>
                     <TextBox Height="20" Width="100"/>
                 </StackPanel>
-                <Label Content="Номер комнаты"/>
+                <Label Content="Номер комнаты" Foreground="White"/>
                 <TextBox Height="20"/>
-                <Label Content="Почта"/>
+                <Label Content="Почта" Foreground="White"/>
                 <TextBox Height="20"/>
-                <Label Content="Статус Гостя"/>
+                <Label Content="Статус Гостя" Foreground="White"/>
                 <TextBox Height="20" />
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="Очистить" HorizontalAlignment="Right" Width="165"/>
-                    <Button Content="Сохранить" HorizontalAlignment="Left" Width="165"/>
+                    <Button Content="Очистить" HorizontalAlignment="Right" Width="165" Height="20" Style="{DynamicResource DopAppButton}" BorderBrush="#00707070"/>
+                    <Button Content="Сохранить" HorizontalAlignment="Left" Width="165" Height="20" Style="{DynamicResource MainAppButto}" Foreground="White"/>
                 </StackPanel>
             </StackPanel>
 
@@ -69,7 +69,7 @@
         <Grid Background="#787C40" Height="30" VerticalAlignment="Top" Grid.Column="2">
             <TextBlock Text="Дата" Foreground="White" FontSize="20" HorizontalAlignment="Center"/>
         </Grid>
-        <Grid Background="LightSlateGray" Grid.Column="2" Margin="0 30 0 0">
+        <Grid Background="#4C5971" Grid.Column="2" Margin="0 30 0 0">
             <Viewbox Stretch="Uniform">
                 <Calendar/>
             </Viewbox>
@@ -77,9 +77,9 @@
         <Grid Background="#787C40" Height="30" VerticalAlignment="Top" Grid.Row="2" Grid.Column="0">
             <TextBlock Text="Комнаты" Foreground="White" FontSize="20" HorizontalAlignment="Center" />
         </Grid>
-        <Grid Grid.Row="2" Background="BlanchedAlmond" Margin="0 30 0 0">
+        <Grid Grid.Row="2" Background="#4C5971" Margin="0 30 0 0">
             <StackPanel>
-                <ListView Height="325">
+                <ListView Height="325" Background="#FF4C5971" BorderBrush="#00828790">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="Имя,Фамилия" Width="80"/>
@@ -89,17 +89,20 @@
                     </ListView.View>
                 </ListView>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button x:Name="NewGuest" Content="Новый Гость" Width="165" Click="NewGuest_Click"/>
-                    <Button Content="Функции" Width="165"/>
+                    <Button x:Name="NewGuest" Content="Новый Гость" Width="165" Height="20" Click="NewGuest_Click" Style="{DynamicResource MainAppButto}" Foreground="White"/>
+                    <Button Content="Функции" Width="165" Style="{DynamicResource DopAppButton}" BorderBrush="#00707070" Height="20"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
         <Grid Background="#787C40"  Height="30"  VerticalAlignment="Top" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
             <TextBlock Text="Информация" Foreground="White" FontSize="20" HorizontalAlignment="Center"/>
         </Grid>
-        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  Background="Khaki" Margin="0 30 0 0">
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  Background="#4C5971" Margin="0 30 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
             <StackPanel>
-                <ListView Height="320" Width="300" HorizontalAlignment="Left" Background="Khaki">
+                <ListView Height="320" Width="300" HorizontalAlignment="Left" Background="#4C5971" BorderBrush="#00828790">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="Услуга" />
