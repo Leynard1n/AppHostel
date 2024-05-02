@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿using System.Configuration;
+using System.Data;
+using System.Data.Common;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,6 +11,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AppHostel.DB;
+using MySql.Data.MySqlClient;
+
+using Mysqlx.Cursor;
+using MySql.Data;
+
 using Newtonsoft.Json;
 
 namespace AppHostel
@@ -21,20 +30,22 @@ namespace AppHostel
         public static MainWindow Window;
         public MainWindow()
         {
+           
             InitializeComponent();
             Window = this;
-          
+
         }
+
 
         private void CloseWindow_Click(object sender, RoutedEventArgs e)
         {
-            Close();    
+            Close();
         }
-        private void Drag (object sender, RoutedEventArgs e) 
+        private void Drag(object sender, RoutedEventArgs e)
         {
-        if (Mouse.LeftButton == MouseButtonState.Pressed) 
-            { 
-                MainWindow.Window.DragMove(); 
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+            {
+                MainWindow.Window.DragMove();
             }
         }
 
@@ -47,10 +58,28 @@ namespace AppHostel
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-           
-            Window window = new LogWindow();
-            window.Show();
-            MainWindow.Window.Close();
+            String loginUser = LoginUS.Text;
+            String passUser = PasswdUS.Text;
+            DateBase DB = new DateBase();
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `Login` = @uL AND `Password` = @uP", DB.GetConnection());            
+            command.Parameters.Add("@uL", MySqlDbType.Text).Value = loginUser;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("yes");
+                Window window = new LogWindow();
+                window.Show();
+                MainWindow.Window.Close();
+            }
+            else
+                MessageBox.Show("no");
+
+
         }
     }
+    
 }

@@ -24,12 +24,12 @@
         <Grid Background="#4C5971" Grid.Column="0" Margin="0 30 0 0 ">
             <StackPanel>
                 <Label Content="Имя" Foreground="White"/>
-                <TextBox Name="Name" Height="20" VerticalAlignment="Top" />
+                <TextBox Name="NameFind" Height="20" VerticalAlignment="Top" TextChanged="Name_TextChanged" />
                 <Label Content="Фамилия" Foreground="White"/>
-                <TextBox Height="20"/>
+                <TextBox x:Name="SurNameFind" Height="20"/>
                 <Label Content="Номер комнаты" Foreground="White"/>
-                <TextBox Height="20"/>
-                <Button Content="поиск" Style="{DynamicResource MainAppButto}" Foreground="White" Height="20"/>
+                <TextBox x:Name="RoomFind" Height="20" TextChanged="RoomFind_TextChanged"/>
+                <Button Content="поиск" Name="FindButton" Style="{DynamicResource MainAppButto}" Foreground="White" Height="20" Click="FindButton_Click"/>
             </StackPanel>
         </Grid>
         <Grid Background="#787C40" Height="30" VerticalAlignment="Top" Grid.Column="1">
@@ -71,7 +71,7 @@
         </Grid>
         <Grid Background="#4C5971" Grid.Column="2" Margin="0 30 0 0">
             <Viewbox Stretch="Uniform">
-                <Calendar/>
+                <Calendar />
             </Viewbox>
         </Grid>
         <Grid Background="#787C40" Height="30" VerticalAlignment="Top" Grid.Row="2" Grid.Column="0">
@@ -79,12 +79,12 @@
         </Grid>
         <Grid Grid.Row="2" Background="#4C5971" Margin="0 30 0 0">
             <StackPanel>
-                <ListView Height="325" Background="#FF4C5971" BorderBrush="#00828790">
+                <ListView Height="325" Background="#FF4C5971" BorderBrush="#00828790" SelectionChanged="ListView_SelectionChanged">
                     <ListView.View>
-                        <GridView>
-                            <GridViewColumn Header="Имя,Фамилия" Width="80"/>
-                            <GridViewColumn Header="Комната" Width="80"/>
-                            <GridViewColumn Header="Статус" Width="80"/>
+                        <GridView >
+                           
+                            <GridViewColumn Header="Комната" x:Name="roomnb" Width="100"/>
+                            <GridViewColumn Header="Статус" x:Name="stater" Width="100"/>
                         </GridView>
                     </ListView.View>
                 </ListView>

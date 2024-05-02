@@ -21,9 +21,9 @@
                         <StackPanel>
                             <TextBlock x:Name="LoginTxtBlock" Text="Sing In" Style="{DynamicResource TxtMainApp}" HorizontalAlignment="Center" Margin="0 0 0 20"/>
                             <TextBlock Text="Login" Style="{DynamicResource TxtMainApp}" Margin="50 0 0 0"/>
-                            <TextBox Style="{DynamicResource LoginBox}" Margin="10 0 10 10" Height="40"/>
+                            <TextBox x:Name="LoginUS" Style="{DynamicResource LoginBox}" Margin="10 0 10 10" Height="40" />
                             <TextBlock Text="Password" Style="{DynamicResource TxtMainApp}" Margin=" 50 0 0 0"/>
-                            <PasswordBox Style="{DynamicResource PasswrdBox}" Margin="10 0 10 50" Height="40"/>
+                            <TextBox x:Name="PasswdUS" Style="{DynamicResource LoginBox}" Margin="10 0 10 50" Height="40"/>
                             <Button Content="Login" Style="{DynamicResource MainAppButto}" x:Name="LoginButton" Height="45" Width="100" HorizontalAlignment="Center" Margin="20 0 0 40" FontSize="30" Click="LoginButton_Click"/>
                         </StackPanel>
                     </Border>

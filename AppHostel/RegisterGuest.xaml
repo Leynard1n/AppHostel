@@ -14,31 +14,29 @@
         <Grid Grid.Column="0" Background="#4C5971">
             <StackPanel>
                 <Label Content="Name" Foreground="White"/>
-                <TextBox Height="20"/>
+                <TextBox x:Name="AddName" Height="20"/>
                 <Label Content="Surname" Foreground="White"/>
-                <TextBox Height="20"/>
+                <TextBox x:Name="AddSurname" Height="20"/>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Country" Foreground="White"/>
-                    <TextBox Height="20" Width="40"/>
+                    <TextBox x:Name="AddCountry" Height="20" Width="40"/>
                     <Label Content="City" Foreground="White"/>
-                    <TextBox Height="20" Width="120"/>
-                    <Label Content="Phone" Foreground="White"/>
-                    <TextBox Height="20" Width="110"/>
+                    <TextBox x:Name="AddSity" Height="20" Width="120"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Серия" Foreground="White"/>
-                    <TextBox Height="20" Width=" 60"/>
+                    <TextBox x:Name="AddSeria" Height="20" Width=" 60"/>
                     <Label Content="Номер" Foreground="White"/>
-                    <TextBox Height="20" Width="120"/>
+                    <TextBox x:Name="AddNumberPS" Height="20" Width="120"/>
                 </StackPanel>
                 <Label Content="Email" Foreground="White"/>
-                <TextBox Height="20"/>
+                <TextBox x:Name="AddMail" Height="20"/>
                 <Label Content="Room" Foreground="White"/>
-                <TextBox Height="20"/>
+                <TextBox x:Name="AddRoom" Height="20"/>
                 <Label Content="Привелегия" Foreground="White"/>
-                <TextBox Height="20" />
-                <Button x:Name="Save" Content="Save and send" Style="{DynamicResource MainAppButto}" Foreground="White"/>
-                <Button x:Name="BAck" Content="Отменить" Click="BAck_Click" Style="{DynamicResource DopAppButton}"/>
+                <TextBox x:Name="AddPriv" Height="20" />
+                <Button x:Name="Save" Content="Save and send" Style="{DynamicResource MainAppButto}" Foreground="White" Height="20" Click="Save_Click"/>
+                <Button x:Name="BAck" Content="Отменить" Click="BAck_Click" Style="{DynamicResource DopAppButton}" Height="20"/>
             </StackPanel>
                 </Grid>
         <Grid Grid.Column="1" Background="DimGray" >
