@@ -38,30 +38,30 @@
         <Grid Background="#4C5971" Grid.Column="1" Margin="0 30 0 0">
             <StackPanel>
                 <Label Content="Имя, Фамилия" Foreground="White"/>
-                <TextBox Height="20"/>
+                <TextBox Height="20" x:Name="NameSurViev" />
                 <Label Content="Адресс" Foreground="White"/>
-                <TextBox Height="20"/>
+                <TextBox Height="20" x:Name="SityViev"/>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Страна" Foreground="White"/>
-                    <TextBox Height="20" Width="50"/>
+                    <TextBox Height="20" Width="50" x:Name="CountryViev"/>
                     <Label Content="Номер телефона" Foreground="White"/>
                     <TextBox Height="20" Width="130"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <Label Content="Номер паспорта" Foreground="White"/>
-                    <TextBox Height="20" Width="40"/>
+                    <TextBox Height="20" Width="40" x:Name="NumberPSViev"/>
                     <Label Content="Серия паспорта" Foreground="White"/>
-                    <TextBox Height="20" Width="100"/>
+                    <TextBox Height="20" Width="100" x:Name="SeriaPSViev"/>
                 </StackPanel>
                 <Label Content="Номер комнаты" Foreground="White"/>
-                <TextBox Height="20"/>
+                <TextBox Height="20" x:Name="RoomNBViev"/>
                 <Label Content="Почта" Foreground="White"/>
-                <TextBox Height="20"/>
+                <TextBox Height="20" x:Name="MAilViev"/>
                 <Label Content="Статус Гостя" Foreground="White"/>
-                <TextBox Height="20" />
+                <TextBox Height="20" x:Name="StViev"/>
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="Очистить" HorizontalAlignment="Right" Width="165" Height="20" Style="{DynamicResource DopAppButton}" BorderBrush="#00707070"/>
-                    <Button Content="Сохранить" HorizontalAlignment="Left" Width="165" Height="20" Style="{DynamicResource MainAppButto}" Foreground="White"/>
+                    <Button Content="Очистить" HorizontalAlignment="Right" Width="165" Height="20" Style="{DynamicResource DopAppButton}" BorderBrush="#00707070" Click="Clear_Click"/>
+                    <Button Content="Сохранить" HorizontalAlignment="Left" Width="165" Height="20" Style="{DynamicResource MainAppButto}" Foreground="White" Click="SaveButton_Click" />
                 </StackPanel>
             </StackPanel>
 
@@ -79,12 +79,10 @@
         </Grid>
         <Grid Grid.Row="2" Background="#4C5971" Margin="0 30 0 0">
             <StackPanel>
-                <ListView Height="325" Background="#FF4C5971" BorderBrush="#00828790" SelectionChanged="ListView_SelectionChanged">
+                <ListView Height="325" Background="#FF4C5971" BorderBrush="#00828790" Name="listView1" ItemsSource="{Binding Items}" >
                     <ListView.View>
-                        <GridView >
-                           
-                            <GridViewColumn Header="Комната" x:Name="roomnb" Width="100"/>
-                            <GridViewColumn Header="Статус" x:Name="stater" Width="100"/>
+                        <GridView>
+                            <!-- Колонки будут добавлены динамически в коде C# -->
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -102,16 +100,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel>
-                <ListView Height="320" Width="300" HorizontalAlignment="Left" Background="#4C5971" BorderBrush="#00828790">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn Header="Услуга" />
-                            <GridViewColumn Header="Комната"/>
-                            <GridViewColumn Header="Статус" />
-                            <GridViewColumn Header="Стоимость"/>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+               
 
             </StackPanel>
         </Grid>

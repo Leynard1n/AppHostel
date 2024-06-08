@@ -43,7 +43,7 @@ namespace AppHostel
 
         private void MInimazeButton2_Click(object sender, RoutedEventArgs e)
         {
-            _ = Application.Current.Windows
+            _ = System.Windows.Application.Current.Windows
             ;
             { LogWindow.Window.WindowState = WindowState.Minimized; }
         }

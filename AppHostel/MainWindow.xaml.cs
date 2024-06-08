@@ -51,7 +51,7 @@ namespace AppHostel
 
         private void MinimazeWindow_Click(object sender, RoutedEventArgs e)
         {
-            _ = Application.Current.Windows
+            _ = System.Windows.Application.Current.Windows
            ;
             { MainWindow.Window.WindowState = WindowState.Minimized; }
         }
@@ -70,13 +70,14 @@ namespace AppHostel
             adapter.Fill(table);
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("yes");
+                System.Windows.MessageBox.Show("yes");
+
                 Window window = new LogWindow();
                 window.Show();
                 MainWindow.Window.Close();
             }
             else
-                MessageBox.Show("no");
+                System.Windows.MessageBox.Show("no");
 
 
         }

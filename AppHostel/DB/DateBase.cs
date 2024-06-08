@@ -27,7 +27,7 @@ namespace AppHostel.DB
             mySqlConnection = new MySql.Data.MySqlClient.MySqlConnection(stringBuilder.ToString());
             OpenConnection();
         }
-        private bool OpenConnection()
+        public bool OpenConnection()
         {
             try
             {
@@ -36,7 +36,8 @@ namespace AppHostel.DB
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               
+                System.Windows.MessageBox.Show(ex.Message);
                 return false;
             }
         }
@@ -49,7 +50,7 @@ namespace AppHostel.DB
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
             }
         }
         internal MySql.Data.MySqlClient.MySqlConnection GetConnection()
@@ -87,7 +88,7 @@ namespace AppHostel.DB
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.MessageBox.Show(ex.Message);
                 return -1;
             }
         }
